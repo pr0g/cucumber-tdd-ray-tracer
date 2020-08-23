@@ -1,0 +1,15 @@
+# https://github.com/cucumber/cucumber-cpp
+
+# need to have ruby installed
+
+# need to have cucumber 2.0.0 installed for it to work
+gem install cucumber -v 2.0.0
+
+# need to have cucumber dependencies (boost, gtest, etc...)
+
+# cucumber example
+build/examples/Calc/BoostCalculatorSteps >/dev/null &
+cucumber examples/Calc
+
+# my new example
+build/RayTracerTest >/dev/null & cucumber .
